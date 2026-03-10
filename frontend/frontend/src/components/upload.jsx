@@ -29,7 +29,7 @@ function Upload() {
                 <label className="choose">
                     Choose File
                     <input
-                        type="file"
+                        type="file" accept = ".csv, .xlsx"
                         className="hidden"
                         onChange={(e) => setFile(e.target.files[0])}
                     />
