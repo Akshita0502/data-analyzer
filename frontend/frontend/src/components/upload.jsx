@@ -3,26 +3,37 @@ function Upload() {
     const [file, setFile] = useState(null);
 
     const handleUpload = async () => {
-        if (!file) {
-            alert("no file detected! add a file first.");
-            return;
-        }
 
-        const formData = new FormData();
-        formData.append("file", file);
+    if (!file) {
+        alert("No file detected! Add a file first.");
+        return;
+    }
 
-        const res = await fetch("https://data-analyzer-backend-eas4.onrender.com/upload", {
-            method: "POST",
-            body: formData
-        });
+    // ✅ check file type
+    const validTypes = [
+        "text/csv",
+        "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+    ];
 
-        if(res.ok){
-            alert(" File uploaded successfully!");
-        }
-        else{
-            alert("Upload failed! Please upload a valid file. ");
-        }
-    };
+    if (!validTypes.includes(file.type)) {
+        alert("Only CSV or XLSX files are allowed!");
+        return;
+    }
+
+    const formData = new FormData();
+    formData.append("file", file);
+
+    const res = await fetch("https://data-analyzer-backend-eas4.onrender.com/upload", {
+        method: "POST",
+        body: formData
+    });
+
+    if (res.ok) {
+        alert("File uploaded successfully!");
+    } else {
+        alert("Upload failed! Please upload a valid file.");
+    }
+};
 
     return (
         <div className="upload-section">
