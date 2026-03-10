@@ -26,7 +26,7 @@ Generate Charts
 {charts.map((chart,index)=>(
     <img
         key={index}
-        src={`https://data-analyzer-backend-eas4.onrender.com${chart}`}
+        src={`https://data-analyzer-backend-eas4.onrender.com/charts/${chart}`}
         alt="chart"
         width="300"
     />
