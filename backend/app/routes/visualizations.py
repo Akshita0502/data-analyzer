@@ -15,6 +15,8 @@ def visualize_data():
 
     df = state.dataset
 
+    df.columns = df.columns.str.replace(r"[^\w]", "_", regex=True)
+
     charts = []
 
     # create charts folder if not present
