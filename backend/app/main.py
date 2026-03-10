@@ -10,6 +10,11 @@ app.include_router(aisummary.router)
 
 app.mount("/charts", StaticFiles(directory="charts"), name="charts")
 
+origins = [
+    "https://data-analyzer-git-main-akshita0502s-projects.vercel.app"
+]
+
+
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],
