@@ -6,7 +6,7 @@ function Analysis() {
 
   const getanalysis = async () => {
     try {
-      const res = await fetch("http://localhost:8000/analysis");
+      const res = await fetch("https://data-analyzer-backend-eas4.onrender.com");
       const result = await res.json();
       setDataset(result);
     } catch (err) {
