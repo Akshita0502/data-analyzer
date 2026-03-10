@@ -16,7 +16,12 @@ function Upload() {
             body: formData
         });
 
-        alert("upload successfully!");
+        if(res.ok){
+            alert(" File uploaded successfully!");
+        }
+        else{
+            alert("Upload failed! Please upload a valid file. ");
+        }
     };
 
     return (
