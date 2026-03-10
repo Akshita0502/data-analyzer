@@ -11,7 +11,7 @@ function Upload() {
         const formData = new FormData();
         formData.append("file", file);
 
-        await fetch("https://data-analyzer-backend-eas4.onrender.com/upload", {
+        const res = await fetch("https://data-analyzer-backend-eas4.onrender.com/upload", {
             method: "POST",
             body: formData
         });
