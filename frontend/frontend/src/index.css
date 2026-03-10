@@ -1,0 +1,226 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* page background */
+body{
+  background-color:#faf5ff;
+  margin:0;
+  min-height:100vh;
+  font-family:'Gill Sans','Gill Sans MT',Calibri,'Trebuchet MS',sans-serif;
+}
+
+/* navbar title */
+h1{
+  color:#6b21a8;
+  font-size:40px;
+  margin:0;
+  padding:20px;
+}
+
+h1:hover{
+  color:#4c1d95;
+}
+
+/* message text */
+h2{
+  font-size:24px;
+  color:#7e22ce;
+}
+
+h3{
+  color:#7e22ce;
+}
+
+/* buttons */
+button{
+  background-color:#6b21a8;
+  color:white;
+  border-radius:8px;
+  border:none;
+  font-size:15px;
+  padding:12px 20px;
+  margin:10px 0;
+  font-weight:bold;
+  cursor:pointer;
+}
+
+button:hover{
+  background-color:#4c1d95;
+}
+
+/* choose file button */
+.choose{
+  background-color:#ede9fe;
+  border:2px solid #c4b5fd;
+  padding:12px 20px;
+  border-radius:8px;
+  font-size:15px;
+  color:#6b21a8;
+  margin-top:20px;
+  cursor:pointer;
+}
+
+.choose:hover{
+  background-color:#ddd6fe;
+}
+
+/* title */
+.title{
+  color:#6b21a8;
+  font-size:28px;
+  margin-bottom:10px;
+}
+
+/* navbar */
+.navbar{
+  background:white;
+  border-bottom:2px solid #e9d5ff;
+  padding:15px 40px;
+  box-shadow:0 2px 6px rgba(0,0,0,0.05);
+}
+
+.navbar h1{
+  color:#6b21a8;
+  font-size:28px;
+  margin:0;
+  text-align:center;
+}
+
+/* hero message section */
+.hero-message{
+  text-align:center;
+  margin-top:30px;
+  margin-bottom:40px;
+}
+
+.quote{
+  font-style:italic;
+  margin-top:10px;
+  color:#6b21a8;
+}
+
+/* main container */
+.main-container{
+  width:80%;
+  margin:auto;
+  margin-top:40px;
+}
+
+/* upload section */
+.upload-section{
+  margin-bottom:40px;
+  text-align:left;
+}
+
+/* upload heading */
+.headingupload{
+  text-align:left;
+  color:#6b21a8;
+  font-size:26px;
+  margin-bottom:10px;
+}
+
+/* upload buttons stack */
+.upload-buttons{
+  display:flex;
+  flex-direction:column;
+  align-items:flex-start;
+  gap:10px;
+  max-width:400px;
+}
+
+/* buttons row (analysis + charts) */
+.action-buttons{
+  margin-top:25px;
+  display:flex;
+  gap:20px;
+  justify-content:flex-start;
+  flex-wrap:wrap;
+}
+
+/* dataset columns list */
+.columns-list{
+  list-style-type:disc;
+  padding-left:20px;
+  color:#6b21a8;
+}
+
+/* cards for results */
+.result-card{
+  background:#f3e8ff;
+  padding:20px;
+  border-radius:12px;
+  margin-top:20px;
+  max-width:700px;
+  box-shadow:0 4px 10px rgba(0,0,0,0.05);
+}
+
+/* analysis report section */
+.analysis-report{
+  margin-top:40px;
+  text-align:left;
+}
+
+/* table styling */
+.analysis-table{
+  margin-top:15px;
+  border-collapse:collapse;
+  width:450px;
+  background:white;
+  border-radius:10px;
+  overflow:hidden;
+  box-shadow:0 4px 10px rgba(0,0,0,0.05);
+}
+
+.analysis-table th,
+.analysis-table td{
+  border:1px solid #eee;
+  padding:10px;
+}
+
+.analysis-table th{
+  background:#7e22ce;
+  color:white;
+}
+
+.analysis-table td{
+  background:white;
+  color:#333;
+}
+
+/* charts section */
+.chart-container{
+  margin-top:30px;
+  display:flex;
+  gap:20px;
+  flex-wrap:wrap;
+}
+
+.chart-container img{
+  border-radius:10px;
+  background:white;
+  padding:10px;
+  box-shadow:0 4px 10px rgba(0,0,0,0.05);
+}
+
+/* AI summary card */
+.ai-summary-box{
+  color:#4c1d95;
+  font-size:16px;
+  background:#f3e8ff;
+  padding:20px;
+  border-radius:12px;
+  margin-top:15px;
+  width:500px;
+  box-shadow:0 4px 10px rgba(0,0,0,0.05);
+}
+
+/* footer */
+.footer{
+  margin-top:60px;
+  padding:20px;
+  text-align:center;
+  border-top:2px solid #e9d5ff;
+  color:#6b21a8;
+}

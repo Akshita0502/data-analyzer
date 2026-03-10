@@ -1,0 +1,48 @@
+import { useState } from "react";
+function Upload() {
+    const [file, setFile] = useState(null);
+
+    const handleUpload = async () => {
+        if (!file) {
+            alert("no file detected! add a file first.");
+            return;
+        }
+
+        const formData = new FormData();
+        formData.append("file", file);
+
+        await fetch("http://localhost:8000/upload", {
+            method: "POST",
+            body: formData
+        });
+
+        alert("upload successfully!");
+    };
+
+    return (
+        <div className="upload-section">
+
+            <h2 className="headingupload">Upload Dataset</h2>
+
+            <div className="upload-buttons">
+
+                <label className="choose">
+                    Choose File
+                    <input
+                        type="file"
+                        className="hidden"
+                        onChange={(e) => setFile(e.target.files[0])}
+                    />
+                </label>
+
+                <button onClick={handleUpload}>
+                    Upload
+                </button>
+
+            </div>
+
+        </div>
+    );
+}
+
+export default Upload;
