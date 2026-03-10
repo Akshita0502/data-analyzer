@@ -6,7 +6,7 @@ const [charts, setCharts] = useState([]);
 
 const generateCharts = async () => {
 
-    const res = await fetch("http://localhost:8000/visualization");
+    const res = await fetch("https://data-analyzer-backend-eas4.onrender.com/visualization");
     const data = await res.json();
 
     setCharts(data.charts);
@@ -26,7 +26,7 @@ Generate Charts
 {charts.map((chart,index)=>(
     <img
         key={index}
-        src={`http://localhost:8000/charts/${chart}`}
+        src={`https://data-analyzer-backend-eas4.onrender.com${chart}`}
         alt="chart"
         width="300"
     />

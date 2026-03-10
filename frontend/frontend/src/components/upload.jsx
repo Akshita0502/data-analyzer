@@ -11,7 +11,7 @@ function Upload() {
         const formData = new FormData();
         formData.append("file", file);
 
-        await fetch("http://localhost:8000/upload", {
+        await fetch("https://data-analyzer-backend-eas4.onrender.com/upload", {
             method: "POST",
             body: formData
         });
@@ -22,7 +22,7 @@ function Upload() {
     return (
         <div className="upload-section">
 
-            <h2 className="headingupload">Upload Dataset</h2>
+            <h2 className="heading">Upload Dataset</h2>
 
             <div className="upload-buttons">
 

@@ -6,7 +6,7 @@ function Analysis() {
 
   const getanalysis = async () => {
     try {
-      const res = await fetch("https://data-analyzer-backend-eas4.onrender.com");
+      const res = await fetch("https://data-analyzer-backend-eas4.onrender.com/analysis");
       const result = await res.json();
       setDataset(result);
     } catch (err) {
@@ -16,7 +16,7 @@ function Analysis() {
 
   const aisummary = async () => {
     try {
-      const res = await fetch("http://localhost:8000/ai-summary");
+      const res = await fetch("https://data-analyzer-backend-eas4.onrender.com/ai-summary");
 
       if (!res.ok) {
         console.error("API error:", res.status);
